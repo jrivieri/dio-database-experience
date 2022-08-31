@@ -1,10 +1,13 @@
-#**Git / GitHub**
+**Git / GitHub**
 ***
 
 *no ubuntu, está instalado como padrão a versão 2.25 e para atualizar para a versão atual:*
 
+
 ```add-apt-repository ppa:git-core/ppa```
+
 ```apt update```
+
 ```apt install git```
 
 
@@ -14,6 +17,7 @@ gerar chave para a palavra “ola mundo”:
 ```echo “ola mundo” | openss l sha1```
 
 gerar chave para o conteúdo do arquivo texto.txt:
+
 ```openssl sha1 texto.txt```
 
 *obs.: a cada alteração de conteúdo do texto, é gerado uma nova chave*
@@ -26,7 +30,9 @@ gerar chave para o conteúdo do arquivo texto.txt:
 
 
 ```echo “conteudo” | git hash-object –stdin```
+
 ou
+
 ```echo -e “blob 9\0conteudo” | openssl sha1```
 
 **Tree** – armazena os Blobs
@@ -67,9 +73,11 @@ No bash, digitar:
 ```git init```
 
 ```	git config –global user.email “usario@dominio.com”```
+
 ```	git config –global user.name “usuarioNome”```
 
 ```git add .```
+
 ```git commit -m “mensagem”```
 
 ***
@@ -79,19 +87,22 @@ No bash, digitar:
 
 *Se precisar excluir o nome e senha da configuração do git:*
 ```git config --global --unset user.email```
+
 ```git config --global --unset user.nome```
 *e incluir novamente essas configurações:*
 
 ```git config –global user.email “usuarioNovo@dominioNovo.com”```
+
 ```git config –global user.name “nomeNovo”```
 
 *Criar um repositório no gitHub, depois enviar o repositório local:*
 
 ```git remote add origin git@github.com:usuario/projeto.git```
+
 ```git branch -M main```
+
 ```git push -u origin main```
 
 *Lista a origem do repositório que foi copiado:*
 ```git remote -v```]
 
-****
